@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="15" type="collection">
+        <element label="Contas a pagar" max_length="15" name="u_decimal_1" type="decimal"/>
+        <element label="Deletar" max_length="40" name="u_due_date_1" type="due_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Ano de nascimento" max_length="40" name="u_glide_date_1" type="glide_date"/>
+        <element label="Idade" max_length="40" name="u_integer_1" type="integer"/>
         <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" label="Requested for email" mandatory="true" max_length="40" name="u_requested_for_email" type="string"/>
@@ -11,6 +15,8 @@
                 <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Casa" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Nome" max_length="40" name="u_string_2" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="hr1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
                 <element inactive_on_update="false" label="Human Resources 1" sequence="0" value="hr1"/>
